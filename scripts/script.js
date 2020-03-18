@@ -23,15 +23,19 @@ checkButton.addEventListener('click',function () {
 
     // Error notification start
     if(startSum<0){
+        console.log(`Начальная сумма вклада Должна быть положительным числом!!!!`);
         error.innerHTML = `Начальная сумма вклада Должна быть положительным числом!!!!`;
     }else
     if(monthlyAdd<0){
+        console.log(`Сумма ежемесячного пополнения Должна быть положительным числом!!!!`);
         error.innerHTML = `Сумма ежемесячного пополнения Должна быть положительным числом!!!!`;
     }else
     if(annualPercent<0 || annualPercent>100){
+        console.log(`Процентная ставка Должна быть положительным числом меньше 100!!!!`);
         error.innerHTML = `Процентная ставка Должна быть положительным числом меньше 100!!!!`;
     }else
     if(days<0 || Number.isInteger(days)===false){
+        console.log(`Срок Должен быть положительным целым числом!!!!`);
         error.innerHTML = `Срок Должен быть положительным целым числом!!!!`;
     }
     else{
